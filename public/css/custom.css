@@ -1,0 +1,27 @@
+[class*="sidebar-dark-"] {
+    background-color: #222b45;
+}
+.dark-mode .card {
+    background-color: #222b45;
+    color: #fff;
+}
+[class*="sidebar-dark-"] .nav-header {
+    background-color: inherit;
+    color: #3366ff;
+}
+.dark-mode .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
+.dark-mode .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: transparent;
+    color: #3366ff;
+}
+.dark-mode .content-wrapper {
+    background-color: #222b45;
+    color: #fff;
+}
+.dark-mode .navbar-white {
+    background-color: #222b45;
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(36 72 243);
+}

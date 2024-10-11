@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Autor;
+use Faker\Provider\ar_EG\Person;
 use Illuminate\Http\Request;
 
 class AutorController extends Controller
@@ -16,11 +17,15 @@ class AutorController extends Controller
         if ($request->has('nome')) {
             $query->where('nome', 'like', '%' . $request->input('nome') . '%');
         }
+        $perPage = 5;
+        if ($request->has('perPage')) {
+            $perPage = $request->input('perPage');
+        };
 
         // Paginação
-        $autores = $query->paginate($request->input('perPage', 50));
+        $autores = $query->paginate($request->input('perPage', $perPage));
 
-        return view('autores.index', compact('autores'));
+        return view('autores.index', compact('autores', 'perPage'));
     }
 
     // Exibir o formulário de criação de autor
@@ -50,6 +55,7 @@ class AutorController extends Controller
     public function show($id)
     {
         $autor = Autor::findOrFail($id);
+
         return view('autores.show', compact('autor'));
     }
 
