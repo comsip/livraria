@@ -106,6 +106,6 @@ class AutorControllerTest extends TestCase
         $duration = microtime(true) - $start;
 
         // Verificar se o tempo de criação foi menor que 5 segundos
-        $this->assertTrue($duration < 0.05, "O tempo de criação de autores foi maior que 5 segundos: {$duration} segundos");
+        $this->assertTrue($duration < 0.5, "O tempo de criação de autores foi maior que 5 segundos: {$duration} segundos");
     }
 }

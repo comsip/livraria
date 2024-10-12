@@ -39,7 +39,7 @@
                             <div class="form-group">
                                 <label for="perPage">Itens por Página:</label>
                                 <input type="number" name="perPage" id="perPage" class="form-control"
-                                    value="{{ request('perPage', 10) }}" min="1" max="100">
+                                    value="{{ $perPage }}" min="1" max="100">
                             </div>
                         </div>
                         <div class="col-md-4 d-flex align-items-center pt-4">
